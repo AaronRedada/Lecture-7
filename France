@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    string ans;
+    cout << "What is the Capital of France?\n";;
+    cin >> ans;
+
+    if ((ans == "Paris") || (ans == "paris")) {
+        cout << "Your answer is Correct!";
+    }
+    else {
+        cout << "Your answer is Wrong.";
+    }
+}
