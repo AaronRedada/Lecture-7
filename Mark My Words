@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int z;
+
+	cout << "Enter the Percentage to check the Mark:\n";
+	cin >> z;
+
+	if (cin.fail()) {
+		cin.clear();
+		cin.ignore(numeric_limits < streamsize > ::max(), '\n');
+		cout << "Incorrect Input";
+	}
+	else if (z >= 70) {
+		cout << "\nA percentage of " << z << "% has a grade of A\n";
+	}
+	else if ((z >= 60) && (z <= 69)) {
+		cout << "\nA percentage of " << z << "% has a grade of B\n";
+	}
+	else if ((z >= 50) && (z <= 59)) {
+		cout << "\nA percentage of " << z << "% has a grade of C\n";
+	}
+	else if ((z >= 40) && (z <= 49)) {
+		cout << "\nA percentage of " << z << "% has a grade of D\n";
+	}
+	else if (z < 40) {
+		cout << "\nA percentage of " << z << "% has a grade of F\n";
+	}
+	else {
+		cout << "\nInvalid Input of marks";
+	}
+	return 0;
+}
