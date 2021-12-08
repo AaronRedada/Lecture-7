@@ -1,0 +1,49 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    double mag;
+    cout << "Enter the Magnitude of the Earthquake \n";
+    cin >> mag;
+    cout << endl;
+
+    if (cin.fail())
+    {
+        cin.clear();
+        cin.ignore(numeric_limits < streamsize > ::max(), '\n');
+        cout << "Incorrect Input";
+    }
+    else if (mag < 2.0) {
+        cout << "A magnitude " << mag << " earthquake is considered to be a Micro Earthquake.";
+    }
+    else if ((mag >= 2.0) && (mag < 3.0)) {
+        cout << "A magnitude " << mag << " earthquake is considered to be a Very Minor Earthquake.";
+    }
+    else if ((mag >= 3.0) && (mag < 4.0)) {
+        cout << "A magnitude " << mag << " earthquake is considered to be a Minor Earthquake.";
+    }
+    else if ((mag >= 4.0) && (mag < 5.0)) {
+        cout << "A magnitude " << mag << " earthquake is considered to be a Light Earthquake.";
+    }
+    else if ((mag >= 5.0) && (mag < 6.0)) {
+        cout << "A magnitude " << mag << " earthquake is considered to be a Moderate Earthquake.";
+    }
+    else if ((mag >= 6.0) && (mag < 7.0)) {
+        cout << "A magnitude " << mag << " earthquake is considered to be a Strong Earthquake.";
+    }
+    else if ((mag >= 7.0) && (mag < 8.0)) {
+        cout << "A magnitude " << mag << " earthquake is considered to be a Major Earthquake.";
+    }
+    else if ((mag >= 8.0) && (mag <= 10.0)) {
+        cout << "A magnitude " << mag << " earthquake is considered to be a Great Earthquake.";
+    }
+    else if (mag > 10.0) {
+        cout << "A magnitude " << mag << " earthquake is considered to be a Meteoric Earthquake.";
+    }
+    else {
+        cout << mag << " Is an Incorrect Input.";
+    }
+    return 0;
+    system("pause>0");
+}
