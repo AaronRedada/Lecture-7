@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int money, time;
+
+    cout << "How many minutes do you have to wait for your friend?\n";;
+    cin >> time;
+    cout << endl;
+
+    if (cin.fail())
+    {
+        cin.clear();
+        cin.ignore(numeric_limits < streamsize > ::max(), '\n');
+        cout << "Incorrect Input";
+    }
+    else if (time >= 15) {
+        cout << "How much money do you have?\n";
+        cin >> money;
+        if (money > 5) {
+            cout << "\nGo buy a coffee.";
+        }   
+        else {
+            cout << "Go for a walk around town";
+        }
+    }
+    else if (time < 15) {
+        cout << "Sit in the food zone and wait.";
+    }
+    return 0;
+}
