@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    char x;
+    int y, z;
+
+    cout << "Enter a letter of the alphabet to check whether it is a vowel or consonant:\n";
+    cin >> x;
+    cout << endl;
+
+    if (x == 'a' || x == 'e' || x == 'i' || x == 'o' || x == 'u' || x == 'A' || x == 'E' || x == 'I' || x == 'O' || x == 'U') {
+        cout << x << " is a Vowel!";
+    }
+    
+    y = isalpha(char(x));
+    z = isdigit(char(x));
+
+    if (y == 0 && z != 4) {
+        cout << "That is a special character, not a letter.";
+    }
+    else if (y != 2 && z == 4) {
+        cout << "That is a number, not a letter.";
+    }
+    else if (x != 'a' && x != 'e' && x != 'i' && x != 'o' && x != 'u' && x != 'A' && x != 'E' && x != 'I' && x != 'O' && x != 'U') {
+        cout << x << " is a Consonant!";
+    }
+    else {
+        cout << "Incorrect Input";
+    }
+}
